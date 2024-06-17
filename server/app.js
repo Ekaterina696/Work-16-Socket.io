@@ -29,7 +29,12 @@ io.on('connection', (socket) => {
 
     socket.on('message', (arg) => {
         console.log(arg);
-    })
+    });
+
+    socket.on('disconnect', (reason) => {
+        console.log('Клиент был отключен!'); 
+        console.log(reason);
+    });
 });
 
 httpServer.listen(3001);

@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>Chat</h1>
     <input type="text" v-model="message">
     <button class="btn" @click="send">Отправить</button>
   </div>
