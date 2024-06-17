@@ -23,7 +23,13 @@ app.listen(3000, async () => {
 
 // Запуск сокет-сервера
 io.on('connection', (socket) => {
-    console.log(`Подключен клиент`, socket);
+        socket.emit('connected', {
+        message: 'Вы успешно подключены!'
+    });
+
+    socket.on('message', (arg) => {
+        console.log(arg);
+    })
 });
 
 httpServer.listen(3001);
