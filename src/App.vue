@@ -7,13 +7,6 @@
 </template>
 
 <script>
-const { io } = require('socket.io-client')
-const socket = io('http://localhost:3001')
-
-socket.on('connected', (arg) => {
-  console.log(arg)
-})
-
 export default {
   name: 'App'
 }
